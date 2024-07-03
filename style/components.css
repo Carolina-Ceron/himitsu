@@ -1,0 +1,105 @@
+/* ------------------------------------------------------------------
+                        ESTILOS DEL HEADER
+---------------------------------------------------------------------*/
+
+
+nav{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    background-color: #FDD5D5;
+}
+nav img{
+    height: 10vh;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 550;
+}
+.nav-links ul li a:hover{
+    transition: .2s;
+    color: #F39EA6;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F39EA6;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.menu_icon{
+    display: none;
+}
+
+@media(max-width:700px){
+    
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #F39EA6;
+        height: 100vh;
+        width: 50vw;
+        top: 0;
+        right: -100%;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        border-left: 10px solid #fff;
+    }
+    nav .menu_icon{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        font-size: 2em;
+        margin: 10px;
+    }
+    
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    .nav-links ul li a:hover{
+        text-decoration: underline;
+    }
+}
+
+/* ------------------------------------------------------------------
+                        ESTILOS DEL FOOTER
+---------------------------------------------------------------------*/
+
+/*-----------footer-------------*/
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 5px solid #ED6C78;
+    height: 5vh;
+    font-size: 10px;
+    background-color: #eee;
+    color: #444444;
+}

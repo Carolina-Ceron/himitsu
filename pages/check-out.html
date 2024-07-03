@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HiMitsu! | Checkout</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="../style/style.css">
+
+    <!-- FUENTES DE GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ICONOS DE BOOSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body onload="loadComponents()">
+
+    <!-- Header -->
+    <!-- en este contenedor se inserta el header con el nav -->
+    <header id="header-container"></header>
+
+    <div id="checkout-alert">
+        <div class="checkout-alert-content">
+          <span id="checkout-alert-message"></span>
+          <button onclick="closeCheckoutAlert()">FINALIZAR</button>
+        </div>
+      </div>
+
+    <main class="check-out__main">
+        <form action="#" class="check-out__container">
+            <!-- SECCION DE DATOS PERSONALES -->
+            <div class="checkout-data check-out__personal_info">
+                <h3><i class="fa fa-user ck_title_icon"></i>Identificaci&oacute;n</h3>
+                <label for="ck_name">Nombre:</label>
+                <input type="text" id="ck_name" name="first_name" placeholder="Ingrese su nombre">
+                <label for="ck_lastname">Apellido: </label>
+                <input type="text" id="ck_lastname" name="first_name" placeholder="Ingrese su nombre">
+
+                <label for="ck_email">Correo:</label>
+                <input type="email" id="ck_email" name="ck_email" placeholder="Ingrese su correo electr&oacute;nico">
+
+                <label for="ck_dni">DNI:</label>
+                <input type="number" id="ck_dni" name="ck_dni" placeholder="Ingrese su DNI">
+
+                <label for="ck_phone">Tel&eacute;fono/M&oacute;vil</label>
+                <input type="number" id="ck_phone" name="ck_phone" placeholder="Ingrese tu tel&eacute;fono">
+            </div>
+
+            <!-- SECCION DE DATOS DE ENVIO -->
+            <div class="checkout-data check-out__shipping">
+
+                <h3><i class="fa-solid fa-truck ck_title_icon"></i>Env&iacute;o</h3>
+
+                <label for="ck_postal_code">C&oacute;digo postal:</label>
+                <input type="text" id="ck_postal_code" name="ck_postal_code">
+
+                <label for="ck_city">Ciudad:</label>
+                <input type="text" id="ck_city" name="ck_city">
+
+                <label for="ck_neighborhood">Barrio:</label>
+                <input type="text" id="ck_neighborhood" name="ck_neighborhood">
+
+                <label for="ck_street">Calle:</label>
+                <input type="text" id="ck_street" name="ck_street">
+
+                <label for="ck_housenumber">Altura:</label>
+                <input type="text" id="ck_housenumber" name="ck_housenumber">
+
+                <label for="ck_aditionalinfo">Info adicional:</label>
+                <input type="text" id="ck_aditionalinfo" name="ck_aditionalinfo">
+            </div>
+
+
+            <!-- DATOS DE PAGO -->
+            <div class="checkout-data check-out__payment">
+                <h3><i class="fa-regular fa-credit-card  ck_title_icon"></i>Pago</h3>
+
+                <label for="ck_payment_method">Forma de pago:</label>
+                <br>
+                <input type="radio" id="debit_card" name="ck_payment_method" value="debit"
+                    onclick="showPaymentSection('debit')">
+                <label for="ck_debit_card">Tarjeta de d&eacute;bito</label>
+                <input type="radio" id="credit_card" name="ck_payment_method" value="credit"
+                    onclick="showPaymentSection('credit')">
+                <label for="ck_credit_card">Tarjeta de cr&eacute;dito</label>
+                <input type="radio" id="mercadopago" name="ck_payment_method" value="mp"
+                    onclick="showPaymentSection('mp')">
+                <label for="ck_mp">Mercado Pago</label>
+                <div id="payment_method_container">
+                </div>
+            </div>
+
+
+
+            <div class="ck_purchase_resume">
+                
+            
+            </div>
+           
+
+        </form>
+
+
+
+
+    </main>
+
+    <!--Footer-->
+    <!-- En este contenedor se inserta el footer -->
+    <footer id="footer-container"></footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/4eb81cd0f2.js" crossorigin="anonymous"></script>
+    <script src="../scripts/Product.js"></script>
+    <script src="../scripts/functions.js"></script>
+    <script src="../scripts/components.js"></script>
+
+
+</body>
+
+</html>

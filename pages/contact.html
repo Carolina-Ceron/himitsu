@@ -1,0 +1,105 @@
+<!-- esta debes hacer franco -->
+
+</html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> HiMitsu! </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/contactUs.css">
+
+    <!-- FUENTES DE GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ICONOS DE BOOSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body onload="loadComponents()">
+
+    <!-- Header -->
+    <!-- en este contenedor se inserta el header con el nav -->
+    <header id="header-container"></header>
+
+
+    <main>
+        <!-- Seccion contactanos -->
+        <section id="contactSection">
+            <div id="contactText">
+                <h2>Conectate con nosotros!</h2>
+                <p>Estaremos encantados de responder a tus dudas y ayudarte a resolverlo</p>
+                <p>Sentite libre de ponerte en contacto con nosotros</p>
+            </div>
+
+            <div id="contactFormInf">
+
+                <div id="formDiv">
+                    <h3>Envía tu consulta</h3>
+                    <form action="#" method="post" id="contactForm">
+                        <div class="formGroup">
+                            <label for="fullName">Nombre:</label>
+                            <label for="phone">Celular:</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Nombre" required>
+                            <input type="number" id="phone" name="phone" placeholder="Celular" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="email">Email:</label>
+                            <label for="producto">Producto:</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="text" id="producto" name="producto" placeholder="Producto" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="mesagge">Mensaje:</label>
+                            <span></span>
+                            <textarea id="mesagge" name="mesagge" rows="4" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="reachUs">
+                    <h3 class="textCenter">Al tu alcance, para estar mas cerca de vos</h3>
+                    <div>
+                        <p class="textCenter">Email:</p>
+                        <p class="textLefth">Hi@Mitsu.com.ar</p>
+                        <p class="textCenter">Telefono:</p>
+                        <p class="textLefth">99963321558</p>
+                        <p class="textCenter">Direccion:</p>
+                        <p class="textLefth">Avenida Siempre Viva 123</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <!-- En este contenedor se inserta el footer -->
+    <footer id="footer-container"></footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="../scripts/components.js"></script>
+    <script src="../scripts/functions.js"></script>
+    <script src="../scripts/ContactUs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

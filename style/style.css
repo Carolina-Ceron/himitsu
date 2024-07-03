@@ -1,0 +1,15 @@
+@import url(index.css);
+@import url(components.css);
+@import url(check-out.css);
+@import url(cart.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection{
+    background-color: #ccc;
+}
+

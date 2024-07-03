@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HiMitsu! | Bienvenido </title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- FUENTES DE GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ICONOS DE BOOSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body onload="loadComponents()">
+
+    <!-- Header -->
+    <!-- en este contenedor se inserta el header con el nav -->
+    <header id="header-container"></header>
+
+    <!-- modal producto agregardo -->
+    <div id="shop-alert">
+        <div class="shop-alert-content">
+        <span id="shop-alert-message"></span>
+        <button onclick="closeShopAlert()">OK</button>
+        </div>
+    </div>
+
+    <!-- modal  producto agregado -->
+    <section class="shop-modal" id="shop-modal">
+        <div class="modal__container">
+            <i class="bi bi-x modal__close" onclick="closeModal()"></i>
+            <div class="modal__img">
+                <img src="#" alt="#">
+            </div>
+            <h2 class="modal_product_title" id="modal_product_title">Nombre del producto</h2>
+            <ul id="product-detail">
+            </ul>
+            <div class="modal-btns">
+                <button class="modal-btn bi bi-cart-check-fill" id="modal__btn-add-cart" title="Añadir al carrito"></button>
+                <button class="modal-btn bi bi-wallet2" id="modal__btn-buy-now" title="Comprar ahora"></button>
+            </div>
+        
+        </div>
+    </section>
+
+    <main>
+        <!-- Seccion Portada -->
+        <section class="section-01">
+            <div class="text-box">
+                <h1 class="animate__animated animate__bounceInLeft">Hi<span>Mitsu</span>!</h1>
+                <p class="animate__animated animate__bounceInLeft"> Peque&ntilde;o emprendimiento dedicado a la venta de cositas cute</p>
+            </div>
+        </section>
+
+        <!-- Seccion Shop -->
+        <section class="section-02">
+            <h6 style="display: none;"> Sección de filtros </h6>
+            <div class="shop-tools">
+
+                <div>
+                    <label for="shop-select">Filtrar por categoría</label>
+                    <select name="shop-select" id="shop-select">
+                        <option value="Todos">Todos</option>
+                        <option value="Agendas">Agendas</option>
+                        <option value="Remeras">Remeras</option>
+                        <option value="Prints">Prints</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="shop-search">BUSCAR</label>
+                    <input type="text" name="shop-search" id="shop-search" value="Escriba aquí..." onclick="clearSearch()">
+                    <button class="bi bi-search btn-shop-search" title="Buscar" onClick="searchCatalog()"></button>
+                </div>
+
+            </div>
+
+            <div class="home-shop" id="home-shop">
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!--Footer-->
+    <!-- En este contenedor se inserta el footer -->
+    <footer id="footer-container"></footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="scripts/Product.js"></script>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/components.js"></script>
+    
+    
+</body>
+
+</html>
